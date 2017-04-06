@@ -16,5 +16,10 @@ namespace Final_Project
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //This is the form load event
+        }
     }
 }
