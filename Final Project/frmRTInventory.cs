@@ -12,6 +12,9 @@ namespace Final_Project
 {
     public partial class frmRTInventory : Form
     {
+        InventoryDataSetTableAdapters.InventoryTableAdapter adapter =
+                    new InventoryDataSetTableAdapters.InventoryTableAdapter();
+
         public frmRTInventory()
         {
             InitializeComponent();
@@ -19,9 +22,7 @@ namespace Final_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'inventoryDataSet.Inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.inventoryDataSet.Inventory);
-
+            dgvInventory.DataSource = adapter.GetData();
         }
 
         private void inventoryBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -35,8 +36,16 @@ namespace Final_Project
         private void btnPurchase_Click(object sender, EventArgs e)
         {
             //This button click event will show the customer what was purchased and also remove the purchased item or items
-            //From the database
-
+            //from the database
+            if (txtQuantity.Text != "")
+            {
+                int quantity = int.Parse(txtQuantity.Text);
+                
+            }
+            else
+            {
+                lblStatusStrip.Text = "You must enter a valid quantity";
+            }
 
         }
     }
