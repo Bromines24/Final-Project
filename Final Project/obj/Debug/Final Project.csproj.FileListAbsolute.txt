@@ -1,1 +1,11 @@
 c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\bin\Debug\Final Project.exe.config
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\bin\Debug\Inventory.mdf
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\bin\Debug\Inventory_log.ldf
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\bin\Debug\Final Project.exe
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\bin\Debug\Final Project.pdb
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.csprojResolveAssemblyReference.cache
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final_Project.frmRTInventory.resources
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final_Project.Properties.Resources.resources
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.csproj.GenerateResource.Cache
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.exe
+c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.pdb
