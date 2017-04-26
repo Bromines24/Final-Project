@@ -9,3 +9,15 @@ c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Fina
 c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.csproj.GenerateResource.Cache
 c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.exe
 c:\users\romib\onedrive\documents\visual studio 2015\Projects\Final Project\Final Project\obj\Debug\Final Project.pdb
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\bin\Debug\Final Project.exe.config
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\bin\Debug\Inventory.mdf
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\bin\Debug\Inventory_log.ldf
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\bin\Debug\Final Project.exe
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\bin\Debug\Final Project.pdb
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final Project.csprojResolveAssemblyReference.cache
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final_Project.EmployeeLoginForm.resources
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final_Project.frmRTInventory.resources
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final_Project.Properties.Resources.resources
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final Project.csproj.GenerateResource.Cache
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final Project.exe
+C:\Users\romib\OneDrive\Documents\Final-Project\Final Project\obj\Debug\Final Project.pdb

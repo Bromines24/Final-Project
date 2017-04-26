@@ -22,6 +22,8 @@ namespace Final_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            inventoryTableAdapter.Fill(inventoryDataSet.Inventory);
+            cboItems.SelectedIndex = -1;
             dgvInventory.DataSource = adapter.GetData();
         }
 
