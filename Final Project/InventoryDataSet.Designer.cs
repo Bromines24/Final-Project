@@ -824,16 +824,11 @@ namespace Final_Project.InventoryDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Count", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE       Inventory
-SET                Count = @Count
-WHERE        (UPC = @Original_UPC) AND ([Item Name] = @Original_Item_Name) AND (Price = @Original_Price) AND (Count = @Original_Count);    
-SELECT UPC, [Item Name], Price, Count FROM Inventory WHERE (UPC = @UPC)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE       Inventory\r\nSET                Count = @Count\r\nWHERE        (UPC = @U" +
+                "PC);     \r\nSELECT UPC, [Item Name], Price, Count FROM Inventory WHERE (UPC = @UP" +
+                "C)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Count", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Count", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UPC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UPC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Item_Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Item Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Count", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Count", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UPC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UPC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -970,18 +965,9 @@ SELECT UPC, [Item Name], Price, Count FROM Inventory WHERE (UPC = @UPC)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Count, int Original_UPC, string Original_Item_Name, double Original_Price, int Original_Count, int UPC) {
+        public virtual int Update(int Count, int UPC) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Count));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_UPC));
-            if ((Original_Item_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Item_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Item_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Original_Price));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Count));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(UPC));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UPC));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
