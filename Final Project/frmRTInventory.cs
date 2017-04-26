@@ -37,11 +37,14 @@ namespace Final_Project
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
+            double total;
+
             //This button click event will show the customer what was purchased and also remove the purchased item or items
             //from the database
             if (txtQuantity.Text != "")
             {
                 int quantity = int.Parse(txtQuantity.Text);
+                total = quantity * 
                 
             }
             else
@@ -49,6 +52,7 @@ namespace Final_Project
                 lblStatusStrip.Text = "You must enter a valid quantity";
             }
 
+            MessageBox.Show("You purchased: " + cboItems.SelectedItem + " x" + txtQuantity.Text + " Your total comes to: " + total.ToString("C"));
         }
     }
 }
