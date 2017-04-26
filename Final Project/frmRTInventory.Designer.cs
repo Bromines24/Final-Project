@@ -39,10 +39,10 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPurchase = new System.Windows.Forms.Button();
-            this.cboItems = new System.Windows.Forms.ComboBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -81,6 +81,7 @@
             this.dgvInventory.DataSource = this.inventoryBindingSource;
             this.dgvInventory.Location = new System.Drawing.Point(12, 28);
             this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventory.Size = new System.Drawing.Size(443, 265);
             this.dgvInventory.TabIndex = 1;
             // 
@@ -119,20 +120,9 @@
             this.btnPurchase.UseVisualStyleBackColor = true;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
-            // cboItems
-            // 
-            this.cboItems.DataSource = this.inventoryBindingSource;
-            this.cboItems.DisplayMember = "Item Name";
-            this.cboItems.FormattingEnabled = true;
-            this.cboItems.Location = new System.Drawing.Point(136, 320);
-            this.cboItems.Name = "cboItems";
-            this.cboItems.Size = new System.Drawing.Size(121, 21);
-            this.cboItems.TabIndex = 3;
-            this.cboItems.ValueMember = "Item Name";
-            // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(263, 320);
+            this.txtQuantity.Location = new System.Drawing.Point(246, 323);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 4;
@@ -152,14 +142,23 @@
             this.lblStatusStrip.Name = "lblStatusStrip";
             this.lblStatusStrip.Size = new System.Drawing.Size(0, 17);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(182, 326);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Quantity:";
+            // 
             // frmRTInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 396);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.cboItems);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.dgvInventory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -190,10 +189,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button btnPurchase;
-        private System.Windows.Forms.ComboBox cboItems;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusStrip;
+        private System.Windows.Forms.Label label1;
     }
 }
 
