@@ -41,10 +41,10 @@ namespace Final_Project
         {
             double total;
             int updatedCount;
-            int count = (int)dgvInventory.SelectedRows[0].Cells[3].Value;
             int upc = (int)dgvInventory.SelectedRows[0].Cells[0].Value;
+            int count;
 
-            //This button click event will show the customer what was purchased and also remove the purchased item or items from the database
+            //This button click event will show the customer/employee what was purchased and also remove the purchased item or items from the database
             //if input is valid, display results to the customer/employee about the purchase
             try
             {
@@ -55,14 +55,14 @@ namespace Final_Project
                     total = quantity * price;
                     lblStatusStrip.Text = "You purchased: " + dgvInventory.SelectedRows[0].Cells[1].Value + " x" + txtQuantity.Text + " Your total comes to: " + total.ToString("C");
 
-                    //Update the counts by subtracting what was purchased
+                    //Update the counts by subtracting what was purchased, then updating the new count in the database
+                    count = (int)adapter.FindCount(upc);
                     updatedCount = count - quantity;
                     adapter.Update(updatedCount, upc);
-                    dgvInventory.DataSource = adapter.GetData();                   
-                    count = (int)dgvInventory.SelectedRows[0].Cells[3].Value;
+                    dgvInventory.DataSource = adapter.GetData();
 
                     //If the count of the selected item falls below 5, a purchase order will be sent to the supplier
-                    if (count < 5)
+                    if (updatedCount < 5)
                     {
                         if (DateTime.Now.Hour > 17)
                         {
